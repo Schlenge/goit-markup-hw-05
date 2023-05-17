@@ -561,7 +561,7 @@ div .box-customers:hover,
   display: flex;
   background: #2f303a;
   height: 251px;
-  width: 1600px;
+  width: auto;
 }
 
 .footer-logo {
@@ -688,7 +688,14 @@ div .box-customers:hover,
 
 /*textele din caseta nu sunt aliniate perfect
  - apare o margine de 16px care nu stiu de unde provine*/
+.product-name{
+position: absolute;
+height: 110px;
+width: 370px;
+background-color: #ffffff;
+z-index: 3;
 
+}
 .product-name h4 {
   padding-bottom: 4px;
   padding-left: 24px;
@@ -713,7 +720,7 @@ div .box-customers:hover,
   margin: 0%;
 }
 
-.product {
+.card {
   box-sizing: border-box;
   width: 370px;
   height: 404px;
@@ -723,7 +730,7 @@ div .box-customers:hover,
   overflow: hidden;
 }
 
-.product:hover {
+.card:hover {
   cursor: pointer;
   border: 1px solid #eeeeee;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -731,7 +738,7 @@ div .box-customers:hover,
 }
 
 .overlay {
-  top: 0;
+  top: 3px;
   left: 0;
   width: 370px;
   height: 294px;
@@ -743,13 +750,14 @@ div .box-customers:hover,
   position: absolute;
 }
 
-.product:hover .overlay {
-  transform: translatey(0);
+.card:hover .overlay {
+  transform: translatey(0%);
 }
 
 .overlay p {
   padding-top: 63px;
   padding-left: 24px;
+  padding-right: 24px;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
